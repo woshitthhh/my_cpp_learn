@@ -8,7 +8,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "C:\\Users\\18143\\Desktop\\cppcode\\build\\${fileBasenameNoExtension}.exe"
+                "C:\\Users\\18143\\Desktop\\cpp\\build\\${fileBasenameNoExtension}.exe"
             ],
             "problemMatcher": {
                 "owner": "cpp",

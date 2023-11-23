@@ -5,7 +5,7 @@
         "name": "(gdb) Launch", 
         "type": "cppdbg", 
         "request": "launch", 
-        "program": "C:\\Users\\18143\\Desktop\\cppcode\\build\\${fileBasenameNoExtension}.exe", 
+        "program": "C:\\Users\\18143\\Desktop\\cpp\\build\\${fileBasenameNoExtension}.exe", 
         "args": [], 
         "stopAtEntry": false,
         "cwd": "${workspaceRoot}",
