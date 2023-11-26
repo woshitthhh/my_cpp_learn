@@ -10,11 +10,12 @@ class Entity
 {
 public:
     float X, Y;
-
+private:
+    double a = 10; //基类的私有成员对于派生类不能被派生类直接访问，但是可以通过基类的公有或保护成员进行访问
 public:
     void Move(float x, float y)
     {
-        X += x;
+        X += x + a;
         Y += y;
     }
     void PrintPosition()
