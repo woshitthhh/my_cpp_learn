@@ -21,7 +21,7 @@ public:
 
 class Player : public Entity
 {
-public:
+private:
     string m_Name;
 
 public:
@@ -43,22 +43,23 @@ void PrintClassName(Printable *obj)
 
 int main()
 {
-    // Entity e; //虚函数必须由基类指针进行访问，对象名加点运算符访问虚函数时静态调用，不会用到虚函数的特性
-    // cout << e.GetName() << endl;
-    // PrintName(e);
-
+    Player e("rong"); //虚函数必须由基类指针进行访问，对象名加点运算符访问虚函数时静态调用，不会用到虚函数的特性
+    cout << e.GetName() << endl;
+    
     // Player p("zhou");
     // Entity *e = &p; // 定义指向Player对象的基类指针，这样才能展现出虚函数的特点，但是e指针仍然只能访问Entity类的方法
     // cout << e->GetName() << endl;
 
-    Entity *e = new Entity();
-    PrintClassName(e);
+    Entity *e0 = new Entity();
+    PrintClassName(e0);
 
-    Entity *e1 = new Player("zhou"); //指向Player对象的Entity类指针，只能访问Entity类的属性和方法
+    /*
+    下面是指向Player对象的Entity类指针e1，只能访问Entity类的属性和方法
+    但是这里如果Player类重写了Entity类的成员函数，就可以实现多态访问重写过的成员函数
+    */
+    Entity *e1 = new Player("zhou"); 
     PrintClassName(e1);
-    cout << e1->GetName() <<endl;
 
     Player *p = new Player("tao"); //指向Player对象的Player类指针，只能访问Player类的属性和方法
     PrintClassName(p);
-    cout << p->m_Name << endl;
 }

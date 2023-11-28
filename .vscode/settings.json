@@ -60,7 +60,8 @@
       "xutility": "cpp",
       "stdlib.h": "c",
       "string.h": "c",
-      "iomanip": "cpp"
+      "iomanip": "cpp",
+      "array": "cpp"
     },
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "aiXcoder.showTrayIcon": true,
